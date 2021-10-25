@@ -1122,6 +1122,27 @@ footer .credits a {
   border-radius: .3rem;
 }
 
+@media (max-width: 399px) {
+  .about-img{
+    width: 70%;
+    height: auto;
+  }
+  .about-info p{
+    margin-bottom: 10px;
+  }
+  .about-info{
+    margin-left: -20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 399px) {
+  .about-info{
+    margin-left: 15%;
+    font-size: 0.9rem;
+  }
+}
+
 @media (min-width: 577px) {
   .counter-box {
     margin-bottom: 1.8rem;
