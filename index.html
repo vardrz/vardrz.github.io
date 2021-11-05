@@ -152,16 +152,16 @@
       <div class="row">
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-1.jpg" data-lightbox="gallery-mf">
+            <a style="cursor: pointer;" data-toggle="modal" data-target="#sipema">
               <div class="work-img">
-                <img src="img/work-1.jpg" alt="" class="img-fluid">
+                <img src="img/work-1.jpg" alt="SiPeMa" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col">
-                    <h2 class="w-title"><a href="#">SiPeMa - Web Pengaduan Masyarakat</a></h2>
+                    <h2 class="w-title"><a style="cursor: pointer;" data-toggle="modal" data-target="#sipema">SiPeMa - Web Pengaduan Masyarakat</a></h2>
                     <div class="w-more">
-                      <span class="w-ctegory">CodeIgniter</span> / <span class="w-date">9 Mart 2021</span>
+                      <span class="w-ctegory">CodeIgniter</span> / <span class="w-date">9 April 2021</span>
                     </div>
                   </div>
                 </div>
@@ -169,7 +169,6 @@
             </a>
           </div>
         </div>
-        
       </div>
     </div>
   </section>
@@ -414,6 +413,55 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
+
+  <!-- Modal -->
+  <!-- SiPeMa -->
+  <div class="modal fade" id="sipema" tabindex="-1" role="dialog" aria-labelledby="sipema" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">SiPeMa - Sistem Pengaduan Masyarakat</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <b>SiPeMa</b> - website pengaduan dan aspirasi masyarakat, dibuat menggunakan framework CodeIgniter 3 dan di bagian pengelolaan database-nya menggunakan MySql.
+          <br>Terdapat 2 halaman dashboard, User dan Administrator, di bagian Administrator menggunakan 2 Hak Akses yaitu Admin dan Petugas.
+          <br>Project ini dibuat sebagai syarat untuk Ujian Praktik SMK Muhammadiyah Pencongan.
+          <p class="mt-2">
+            <b>User Modul :</b>
+            <br>1. Login & Register
+            <br>2. Membuat Laporan Pengaduan
+            <br>3. Kirim hanya 1 Laporan/hari
+          </p>
+          <p class="mt-2">
+            <b>Admin Modul :</b>
+            <br>1. Data Laporan Berdasarkan Status
+            <br>2. Verifikasi dan Tolak Laporan
+            <br>3. Memberi Tanggapan
+            <br>4. Export Laporan to PDF
+            <br>5. Add User / Petugas
+          </p>
+          <p class="mt-2">
+            <b>Petugas Modul :</b>
+            <br>1. Data Laporan Berdasarkan Status
+            <br>2. Verifikasi dan Tolak Laporan
+            <br>3. Memberi Tanggapan
+            <br>4. Export Laporan to PDF
+          </p>
+          <p class="mt-2">
+            <b>Demo :</b> <a href="https://sipema.vardz.my.id" target="_blank" class="text-primary">https://sipema.vardz.my.id</a>
+          </p>
+          <img src="img/work-1.jpg" alt="SiPeMa" class="img-fluid mt-5">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://sipema.vardz.my.id" target="_blank" class="btn btn-primary">Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
