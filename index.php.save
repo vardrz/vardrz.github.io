@@ -68,7 +68,7 @@ include 'conn.php';
       <div class="table-cell">
         <div class="container">
           <h1 class="intro-title mb-4">Farid Fatkhurrozak</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Backend Web Developer,Flutter Developer,IoT Developer</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle"><span class="text-slider-items">Backend Web Developer,Flutter Developer</span><strong class="text-slider"></strong></p>
         </div>
       </div>
     </div>
@@ -158,7 +158,7 @@ include 'conn.php';
                     </div>
 
                     <div class="col-sm-8">
-                      <span style="font-size: 15px;">Mobile Dev</span>
+                      <span style="font-size: 15px;">Android Dev</span>
                       <div class="d-flex align-items-center mt-1">
                         <img src="https://stack-icons.showwcase.com/Flutter.png" width="25px" style="border-radius: 15px;"><span class="ml-2">Flutter</span>
                       </div>
@@ -189,8 +189,8 @@ include 'conn.php';
   </div>
 
   <!--/ Section Portfolio Star /-->
-  <section class="portfolio-mf sect-pt4 route">
-    <div class="container" id="work">
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
@@ -308,11 +308,7 @@ include 'conn.php';
               $image = explode(',', $p['img']);
               echo "<img src='img/" . $image[0] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2'><br/>";
               for ($i = 1; $i < count($image); $i++) {
-		if($p['build'] == 'React Native' or $p['build'] == 'Flutter'){
-	          echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2' width='40%'>";
-		}else{
-		  echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2'>";
-		}
+                echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2' width='40%'>";
               }
               ?>
             </center>
