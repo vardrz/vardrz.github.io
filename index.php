@@ -42,18 +42,18 @@ include 'conn.php';
         <span></span>
       </button>
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Home</a>
+            <a class="nav-link py-3 js-scroll" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
+            <a class="nav-link py-3 js-scroll" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Project</a>
+            <a class="nav-link py-3 js-scroll" href="#work">Project</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
+            <a class="nav-link py-3 js-scroll" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -83,21 +83,21 @@ include 'conn.php';
           <div class="box-shadow-full">
             <div class="row">
               <div class="col-md-6">
-                <div class="row">
+                <div class="row px-3">
                   <div class="col-sm-3 d-flex justify-content-center">
                     <div class="about-img d-flex justify-content-center">
                       <img src="img/me.jpg" class="img-fluid rounded-circle b-shadow-a" />
                     </div>
                   </div>
                   <div class="col-sm-9">
-                    <table width="100%" style="font-size: 17px;">
+                    <table width="100%" style="font-size: 16px;">
                       <tr>
                         <td><ion-icon name="person"></ion-icon></td>
                         <td>Farid Fatkhurrozak</td>
                       </tr>
                       <tr>
                         <td><ion-icon name="code-slash"></ion-icon></td>
-                        <td>Junior Web Developer</td>
+                        <td>Web Developer</td>
                       </tr>
                       <tr>
                         <td><ion-icon name="mail"></ion-icon></td>
@@ -110,74 +110,122 @@ include 'conn.php';
                     </table>
                   </div>
                 </div>
-                <div class="skill-mf mt-3">
-                  <p class="title-s h5 mb-3">Tech Stack</p>
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <span style="font-size: 15px;">Languages</span>
-                      <div class="d-flex align-items-center mt-1">
-                        <img src="https://stack-icons.showwcase.com/PHP.jpg" width="25px" style="border-radius: 15px;"><span class="ml-2" style="font-size: 15px;">PHP</span>
-                      </div>
-                      <div class="d-flex align-items-center mt-2">
-                        <img src="https://stack-icons.showwcase.com/JavaScript.png" width="25px" style="border-radius: 10px;"><span class="ml-2" style="font-size: 15px;">JavaScript</span>
-                      </div>
-                      <div class="d-flex align-items-center mt-2 mb-3">
-                        <img src="https://stack-icons.showwcase.com/Dart.png" width="25px" style="border-radius: 15px;"><span class="ml-2" style="font-size: 15px;">Dart</span>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-8">
-                      <span style="font-size: 15px;">Web Dev</span>
-                      <div class="d-flex align-items-center mt-1">
-                        <img src="https://stack-icons.showwcase.com/CodeIgniter.png" width="25px" style="border-radius: 15px;"><span class="ml-2" style="font-size: 15px;">CodeIgniter</span>
-                      </div>
-                      <div class="d-flex align-items-center mt-2">
-                        <img src="https://stack-icons.showwcase.com/Laravel.jpg" width="25px" style="border-radius: 15px;"><span class="ml-2" style="font-size: 15px;">Laravel</span>
-                      </div>
-                      <div class="d-flex align-items-center mt-2 mb-3">
-                        <img src="https://stack-icons.showwcase.com/expressjs.png" width="25px" style="border-radius: 15px;"><span class="ml-2" style="font-size: 15px;">Express.js</span>
-                      </div>
-                    </div>
-
-
-                    <!-- <div class="col-sm-4">
-                      <span style="font-size: 15px;">CSS Frameworks</span>
-                      <div class="d-flex align-items-center mt-1 mb-3">
-                        <img src="https://stack-icons.showwcase.com/Bootstrap.png" width="25px" style="border-radius: 15px;"><span class="ml-2">Bootstrap</span>
-                      </div>
-                    </div> -->
-
-                    <div class="col-sm-4">
-                      <span style="font-size: 15px;">Databases</span>
-                      <div class="d-flex align-items-center mt-1">
-                        <img src="https://stack-icons.showwcase.com/MySQL.png" width="25px" style="border-radius: 15px;"><span class="ml-2">MySQL</span>
-                      </div>
-                      <div class="d-flex align-items-center mt-2 mb-3">
-                        <img src="https://stack-icons.showwcase.com/MongoDB.png" width="25px" style="border-radius: 15px;"><span class="ml-2">MongoDB</span>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-8">
-                      <span style="font-size: 15px;">Mobile Dev</span>
-                      <div class="d-flex align-items-center mt-1">
-                        <img src="https://stack-icons.showwcase.com/Flutter.png" width="25px" style="border-radius: 15px;"><span class="ml-2">Flutter</span>
-                      </div>
-                      <div class="d-flex align-items-center mt-2 mb-3">
-                        <img src="https://stack-icons.showwcase.com/React.png" width="25px" style="border-radius: 15px;"><span class="ml-2">React Native</span>
-                      </div>
-                    </div>
-                  </div>
+                <div class="skill-mf p-3 mt-3">
+                  <p class="title-s h5 mb-0">About</p>
+                  <!-- <table class="table table-borderless"> -->
+                  <p style="text-align: justify;">
+                    <?= str_replace('I am proficient', '<br>I am proficient', $data['deskripsi']); ?>
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="about-me pt-4 pt-md-0">
                   <div class="title-box-2 mb-4">
-                    <h5 class="title-left">
-                      About me
+                    <h5 class="title-left text-center mb-5">
+                      Tech Stack
                     </h5>
                   </div>
                   <p class="lead">
-                    <?= preg_replace('/\n/', '<br>', $data['deskripsi']); ?>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" width="40" height="40">
+                        <br><small>Google</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="40" height="40">
+                        <br><small>HTML</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css" width="40" height="40">
+                        <br><small>CSS</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="php" width="40" height="40">
+                        <br><small>PHP</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="ci" width="40" height="40">
+                        <br><small>CodeIgniter</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="laravel" width="40" height="40">
+                        <br><small>Laravel</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40">
+                        <br><small>JavaScript</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="node" width="40" height="40">
+                        <br><small>NodeJS</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="next" width="40" height="40">
+                        <br><small>NextJS</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react" width="40" height="40">
+                        <br><small>React&nbsp;Native</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="dart" width="40" height="40">
+                        <br><small>Dart</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="flutter" width="40" height="40">
+                        <br><small>Flutter</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="arduino" width="40" height="40">
+                        <br><small>Arduino</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="mysql" width="40" height="40">
+                        <br><small>MySQL</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="mongo" width="40" height="40">
+                        <br><small>MongoDB</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" width="40" height="40">
+                        <br><small>Bootstrap</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="40" height="40">
+                        <br><small>Figma</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="40" height="40">
+                        <br><small>Git</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="azure" width="40" height="40">
+                        <br><small>Azure</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="apache" width="40" height="40">
+                        <br><small>Apache</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40">
+                        <br><small>NGINX</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="windows" width="40" height="40">
+                        <br><small>Windows</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="debian" width="40" height="40">
+                        <br><small>Debian</small>
+                      </div>
+                      <div class="col text-center mb-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="ubuntu" width="40" height="40">
+                        <br><small>Ubuntu</small>
+                      </div>
+                    </div>
+                  </div>
                   </p>
                 </div>
               </div>
@@ -234,23 +282,22 @@ include 'conn.php';
     </div>
   </section>
 
-  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/bg.jpg)">
+  <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/bg.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="contact-mf">
-            <div id="contact" class="box-shadow-full">
+            <div class="box-shadow-full">
               <div class="row">
-                <div class="col text-center">
+                <div class="col text-center mb-3">
                   <div class="title-box-2">
-                    <h5 class="title-left">
-                      Contact
-                    </h5>
+                    <h2>Contact</h2>
+                    <div class="line-mf"></div>
                   </div>
                   <div class="more-info">
-                    <p class="lead">
-                      You can contact me via email and social media.
+                    <p class="lead px-3">
+                      You can reach me via email and social media.
                     </p>
                   </div>
                   <div class="socials">
@@ -308,11 +355,11 @@ include 'conn.php';
               $image = explode(',', $p['img']);
               echo "<img src='img/" . $image[0] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2'><br/>";
               for ($i = 1; $i < count($image); $i++) {
-		if($p['build'] == 'React Native' or $p['build'] == 'Flutter'){
-	          echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2' width='40%'>";
-		}else{
-		  echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2'>";
-		}
+                if ($p['build'] == 'React Native' or $p['build'] == 'Flutter') {
+                  echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2' width='40%'>";
+                } else {
+                  echo "<img src='img/" . $image[$i] . "' alt='" . $p['tag'] . "' class='img-fluid mt-2'>";
+                }
               }
               ?>
             </center>

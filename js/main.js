@@ -60,6 +60,7 @@
 
 	// Closes responsive menu when a scroll trigger link is clicked
 	$('.js-scroll').on("click", function () {
+		$('.navbar-toggler').addClass('collapsed');
 		$('.navbar-collapse').collapse('hide');
 	});
 

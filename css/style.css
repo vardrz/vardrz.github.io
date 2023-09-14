@@ -180,7 +180,7 @@ a:hover {
   position: absolute;
   height: 3px;
   background-color: #0078ff;
-  width: 100px;
+  width: 150px;
   bottom: -12px;
 }
 
@@ -444,7 +444,7 @@ a:hover {
 
 .navbar-b.navbar-trans .nav-link:hover:before,
 .navbar-b.navbar-reduce .nav-link:hover:before {
-  width: 35px;
+  width: 0;
 }
 
 .navbar-b.navbar-trans .show > .nav-link:before,
@@ -455,7 +455,7 @@ a:hover {
 .navbar-b.navbar-reduce .active > .nav-link:before,
 .navbar-b.navbar-reduce .nav-link.show:before,
 .navbar-b.navbar-reduce .nav-link.active:before {
-  width: 35px;
+  width: 0;
 }
 
 .navbar-b.navbar-trans .nav-link:before {
@@ -471,6 +471,10 @@ a:hover {
 .navbar-b.navbar-trans .nav-link.show,
 .navbar-b.navbar-trans .nav-link.active {
   color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  height: 45px;
+  border-bottom: 2px solid white;
 }
 
 .navbar-b.navbar-reduce {
@@ -497,6 +501,10 @@ a:hover {
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
   color: #0078ff;
+  padding: 0;
+  margin: 0 10px;
+  height: 45px;
+  border-bottom: 2px solid #0078ff;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
@@ -1234,5 +1242,20 @@ footer .credits a {
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
+  }
+
+  .navbar-b.navbar-reduce .show > .nav-link,
+  .navbar-b.navbar-reduce .active > .nav-link,
+  .navbar-b.navbar-reduce .nav-link.show,
+  .navbar-b.navbar-reduce .nav-link.active{
+    color: #0078ff;
+    padding: 0;
+    margin: 0 auto 10px auto;
+    width: 70px;
+    border-bottom: 2px solid #0078ff;
+  }
+
+  .navbar-nav{
+    margin: 50% 0 100% 0;
   }
 }
