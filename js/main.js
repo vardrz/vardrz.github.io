@@ -1,35 +1,59 @@
 (function ($) {
 	"use strict";
 	var nav = $('nav');
-  var navHeight = nav.outerHeight();
+	var navHeight = nav.outerHeight();
+	var isReverse = false;
+	const [v, a, r] = document.querySelectorAll('.letterV, .letterA, .letterR');
   
-  $('.navbar-toggler').on('click', function() {
-    if( ! $('#mainNav').hasClass('navbar-reduce')) {
-      $('#mainNav').addClass('navbar-reduce');
-    }
-  })
+	$('.navbar-toggler').on('click', function() {
+		if( ! $('#mainNav').hasClass('navbar-reduce')) {
+			$('#mainNav').addClass('navbar-reduce');
+		}
+	})
 
-  // Preloader
-  $(window).on('load', function () {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
-        $(this).remove();
-      });
-    }
-  });
+	// Preloader
+	// $(window).on('load', function () {});
 
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-    return false;
-  });
+	// Spin letter animation
+	function spin(vv, aa, rr){
+		v.style.setProperty('animation', 'rotate 1s linear forwards');
+		a.style.setProperty('animation', 'rotate 1s linear forwards');
+		r.style.setProperty('animation', 'rotate 1s linear forwards');
+		setTimeout(() => {
+			v.innerHTML = vv;
+			a.innerHTML = aa;
+			r.innerHTML = rr;
+		}, 100);
+		setTimeout(() => {
+			v.style.removeProperty('animation');
+			a.style.removeProperty('animation');
+			r.style.removeProperty('animation');
+		}, 1000);
+	}
+
+	// Change word every 5s
+	setInterval(() => {
+		if(isReverse == true){
+			spin("V", "A", "R");
+			isReverse = false;
+		}else{
+			spin("F", "R", "I");
+			isReverse = true;
+		}
+	}, 5000);
+
+  	// Back to top button
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top').fadeIn('slow');
+		} else {
+			$('.back-to-top').fadeOut('slow');
+		}
+	});
+	$('.back-to-top').click(function(){
+		$('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+		return false;
+	});
 
 	/*--/ Star ScrollTop /--*/
 	$('.scrolltop-mf').on("click", function () {

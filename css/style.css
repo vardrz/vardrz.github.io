@@ -400,6 +400,26 @@ a:hover {
 //--//-->   NAVBAR
 ======================================*/
 
+/* ANIMATION REVERSE DIRAF */
+.letterV {
+  display: inline-block;
+}
+.letterA {
+  display: inline-block;
+}
+.letterR {
+  display: inline-block;
+}
+@keyframes rotate {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      transform: rotateY(360deg);
+  }
+}
+/* END ANIMATION REVERSE DIRAF */
+
 .navbar-b {
   transition: all .5s ease-in-out;
   background-color: transparent;
