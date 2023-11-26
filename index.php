@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'conn.php';
 ?>
 <!DOCTYPE html>
@@ -70,7 +69,7 @@ include 'conn.php';
       <div class="table-cell">
         <div class="container">
           <h1 class="intro-title mb-4">Farid Fatkhurrozak</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Backend Web Developer,Flutter Developer,IoT Developer</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle"><span class="text-slider-items">Web Developer,Flutter Developer,IoT Developer</span><strong class="text-slider"></strong></p>
         </div>
       </div>
     </div>
@@ -266,7 +265,7 @@ include 'conn.php';
                 <div class="work-content">
                   <div class="row">
                     <div class="col">
-                      <h2 class="w-title"><a style="cursor: pointer;" data-toggle="modal" data-target="<?= $p['tag']; ?>"><?= $p['title']; ?></a></h2>
+                      <h2 class="w-title"><?= $p['title']; ?></h2>
                       <div class="w-more">
                         <span class="w-ctegory"><?= $p['build']; ?></span> / <span class="w-date"><?= $p['tgl']; ?></span>
                       </div>
@@ -349,9 +348,11 @@ include 'conn.php';
           </div>
           <div class="modal-body">
             <?= $p['desk'];; ?>
-            <p class="mt-2">
-              <b>Demo :</b> <a href="<?= $p['demo']; ?>" target="_blank" class="text-primary">Lihat</a>
-            </p>
+            <?php
+            if ($p['demo'] != null) {
+              echo "<p class='mt-2'><b>Link :</b> <a href='" . $p['demo'] . "' target='_blank' class='text-primary'>Lihat</a></p>";
+            }
+            ?>
             <center>
               <?php
               $image = explode(',', $p['img']);
@@ -368,7 +369,6 @@ include 'conn.php';
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <a href="<?= $p['demo']; ?>" target="_blank" class="btn btn-primary">Demo</a>
           </div>
         </div>
       </div>
